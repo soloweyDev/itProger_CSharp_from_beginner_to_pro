@@ -94,5 +94,83 @@ namespace Part1
             List<float> arr = new List<float>() { 3.2f, 3.4f, 1.6f, 3.5f, 8.1f, 1.9f, 0.1f };
             arr.Sort();
         }
+
+        /*
+         Выведите столбец чисел от 25 до 29 с пропуском числа 27. Используйте цикл for, а также сделайте тоже самое с циклом while.
+         */
+        static public void Lesson1_5_1()
+        {
+            for (short i = 25; i < 29; ++i)
+            {
+                if (i == 27)
+                    continue;
+
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine();
+
+            short j = 25;
+            while (j < 29)
+            {
+                if (j != 27)
+                    Console.WriteLine(j);
+
+                j++;
+            }
+        }
+
+        /*
+         Создайте бесконечный цикл. Каждый раз просите пользователя чтобы тот что-то ввел с клавиатуры. После того, как он введет число 0 вы выйдите из цикла.
+         Если пользователь введет число 1, то будет пропущена одна итерация цикла. За каждую итерацию цикла выводите сообщение "One more iteration".
+         */
+        static public void Lesson1_5_2()
+        {
+            string input;
+
+            do
+            {
+                Console.WriteLine("Enter value (0 - exit, 1 - skip or other)");
+                input = Console.ReadLine();
+
+                if (input != "1")
+                    Console.WriteLine("One more iteration");
+            }
+            while (input != "0");
+        }
+
+        /*
+         Создайте двумерный массив и найдите минимальный элемент среди всех чисел в массиве. Массив: { { 0, 34, -2 }, { 3, -4, 5 } }
+         */
+        static public void Lesson1_5_3()
+        {
+            Int16[,] arr = { { 0, 34, -2 }, { 3, -4, 5 } };
+            Int16 min = arr[0, 0];
+
+            foreach (Int16 element in arr)
+            {
+                if (min > element)
+                    min = element;
+            }
+
+            Console.WriteLine("min = " + min);
+        }
+
+        /*
+         Создайте динамический массив чисел. Добавьте в него 7 элементов. При помощи цикла for найдите максимальный элемент в массиве.
+         */
+        static public void Lesson1_5_4()
+        {
+            List<float> arr = new List<float>() { 3.2f, 3.4f, 1.6f, 3.5f, 8.1f, 1.9f, 0.1f };
+
+            float max = arr[0];
+            for (byte i = 1; i < arr.Count; ++i)
+            {
+                if (max < arr[i])
+                    max = arr[i];
+            }
+
+            Console.WriteLine(max);
+        }
     }
 }
