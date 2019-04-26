@@ -193,5 +193,32 @@ namespace Part1
         {
             return lenth == 1;
         }
+
+        /*
+         Попросите пользователя ввести число с клавиатуры, после чего присвойте число в int переменную. До тех пор, пока пользователь не введет именно число,
+         то будет срабатывать ошибка, которую необходимо отследить в try-catch. Просите пользователя ввести число до тех пор, пока он этого не сделает.
+         */
+        static public void Lesson1_7()
+        {
+            int num = 0;
+            bool noExit = true;
+
+            do
+            {
+                Console.WriteLine("Введите целое число в диапозоне от -2 147 483 648 до 2 147 483 647");
+                try
+                {
+                    num = Convert.ToInt32(Console.ReadLine());
+                    noExit = false;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Введено не корректное число");
+                }
+            }
+            while (noExit);
+
+            Console.WriteLine($"Вы введи число {num}");
+        }
     }
 }
