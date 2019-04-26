@@ -220,5 +220,34 @@ namespace Part1
 
             Console.WriteLine($"Вы введи число {num}");
         }
+
+        /*
+         Создайте класс Автомобиль (Car) со следующими характеристиками: вес автомобиля (weigth), марка автомобиля (model), цвет автомобиля (color, обозначить
+         одним символом) и его скорость(speed). Создайте метод, который будет выводить характеристики автомобиля на экран.
+         В главном классе создайте объект класса, измените его характеристики, присвоив ему новые значения и вызовите метод отображения измененных данных.
+         */
+        static public void Lesson1_8()
+        {
+            Car car = new Car();
+            car.color = 'r';
+            car.model = "bmw";
+            car.speed = 250.2f;
+            car.weigth = 1250;
+
+            car.printCar();
+        }
+
+        public class Car
+        {
+            public int weigth;
+            public string model;
+            public char color;
+            public float speed;
+
+            public void printCar()
+            {
+                Console.WriteLine($"weigth: {weigth} model: {model} color: {color} speed: {speed}");
+            }
+        }
     }
 }
