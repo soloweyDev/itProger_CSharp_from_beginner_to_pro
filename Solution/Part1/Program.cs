@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Lesson1_12.Test();
+            Lesson1_14.Test1();
+            Lesson1_14.Test2();
         }
     }
 }
