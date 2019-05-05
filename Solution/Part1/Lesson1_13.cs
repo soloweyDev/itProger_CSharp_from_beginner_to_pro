@@ -21,9 +21,10 @@
             this.os = os;
         }
     }
-    class Lesson1_13
+
+    public static class Lesson1_13
     {
-        void Test()
+        public static void Test()
         {
             Computer computer1 = new Computer("AMD", 15.5f, 0.0f, 6, "Windows");
             Computer computer2 = new Computer("Intel", 12.5f, 1.1f, 2, "MacOS");
