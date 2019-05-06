@@ -34,7 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,7 +49,6 @@
     <Compile Include="Lesson1_13.cs" />
     <Compile Include="Lesson1_14.cs" />
     <Compile Include="Lesson1_15.cs" />
-    <Compile Include="Lesson1_16.cs" />
     <Compile Include="Lesson1_9.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
