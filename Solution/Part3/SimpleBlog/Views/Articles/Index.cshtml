@@ -1,0 +1,27 @@
+﻿@model IEnumerable<SimpleBlog.Models.ArticlesModel>
+
+@{
+    ViewBag.Title = "Статьи с сайта";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <dev>
+                <h1>@Html.DisplayFor(articleItem => item.title)</h1>
+                <br />
+                @Html.DisplayFor(articleItem => item.shortText)
+                <br />
+                Автор: @Html.DisplayFor(articleItem => item.author)
+                <br />
+                <p><a class="btn btn-default" href="">Читать далее &raquo;</a></p>
+            </dev>
+        </td>
+    </tr>
+}
+
+</table>
